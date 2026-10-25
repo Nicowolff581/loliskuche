@@ -357,6 +357,13 @@
               <label><input type="radio" name="pay" value="Nequi" checked> Nequi</label>
               <label><input type="radio" name="pay" value="Daviplata"> Daviplata</label>
             </fieldset>
+            <div class="consent">
+              <label>
+                <input type="checkbox" id="oConsent" name="consent">
+                <span>Autorizo el tratamiento de mis datos según la <a href="privacidad.html" target="_blank" rel="noopener">Política de datos</a> y acepto los <a href="terminos.html" target="_blank" rel="noopener">Términos y condiciones</a>. <span class="req">(obligatorio)</span></span>
+              </label>
+              <p class="consent__note">Usamos tu nombre, dirección y teléfono solo para entregarte el pedido. La página no guarda lo que escribes: el mensaje solo nos llega si tú lo envías por WhatsApp.</p>
+            </div>
             <p class="order__error" id="orderError" role="alert" hidden></p>
             <a class="btn btn--wa btn--block btn--lg" id="sendOrder" aria-label="Enviar mi pedido por WhatsApp" href="https://wa.me/573176645184" target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#wa-icon"/></svg>
@@ -508,6 +515,7 @@
         WhatsApp <a href="https://wa.me/573176645184" target="_blank" rel="noopener">317 664 5184</a> ·
         Instagram <a href="https://www.instagram.com/loliskuche/" target="_blank" rel="noopener">@loliskuche</a>
       </address>
+      <p class="footer__legal"><a href="privacidad.html">Política de tratamiento de datos</a> · <a href="terminos.html">Términos y condiciones</a></p>
       <p class="footer__bye">Guten Appetit!</p>
       <p class="footer__copy">© <span id="year">2026</span> Loli's Küche</p>
     </div>

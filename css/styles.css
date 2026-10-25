@@ -587,3 +587,35 @@ section[tabindex="-1"]:focus { outline: none; }
 @media (min-width: 761px) {
   .scroll-hint { display: none; }
 }
+
+/* ---------- Autorización de datos en el pedido ---------- */
+.consent {
+  margin: 0 0 1rem; padding: .8rem .9rem;
+  background: var(--pale); border: 1.5px solid #b9d3ea; border-radius: 8px;
+}
+.consent label { display: flex; gap: .6rem; align-items: flex-start; font-size: .95rem; line-height: 1.5; cursor: pointer; }
+.consent input { flex: none; width: 20px; height: 20px; margin-top: .15rem; accent-color: var(--blue); }
+.consent__note { margin: .5rem 0 0 1.85rem; font-size: .85rem; color: var(--muted); }
+.consent.is-invalid { border-color: #c62828; box-shadow: 0 0 0 3px rgba(198, 40, 40, .15); }
+.footer__legal { font-size: .9rem; }
+
+/* ---------- Páginas legales (privacidad y términos) ---------- */
+.legal-page { padding-bottom: 0 !important; }
+.legal-page .topbar__inner { gap: 1rem; }
+.legal { max-width: 780px; padding-block: 2.5rem 4rem; }
+.legal h1 { font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: .4rem; }
+.legal h2 { font-size: 1.3rem; margin: 2.2rem 0 .7rem; padding-top: .4rem; border-top: 1px solid var(--gold); }
+.legal p, .legal li { line-height: 1.7; }
+.legal ul, .legal ol { padding-left: 1.3rem; display: grid; gap: .35rem; }
+.legal__meta { color: var(--muted); font-size: .92rem; margin: 0 0 1.5rem; }
+.legal__toc { background: var(--pale); border-radius: var(--radius); padding: 1rem 1.2rem; }
+.legal__toc ol { margin: 0; columns: 2; display: block; }
+.legal__toc li { margin-bottom: .3rem; }
+.legal__card { list-style: none; padding: 1rem 1.2rem !important; background: var(--white); border: 1px solid #c9dcef; border-radius: var(--radius); }
+.legal section { scroll-margin-top: calc(var(--bar-h) + 40px); }
+.legal__back { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2.5rem; }
+mark.fill { background: #fff3c4; color: #7a4b00; padding: 0 .25em; border-radius: 4px; font-weight: 600; }
+@media (max-width: 760px) {
+  .legal-page .topbar .btn--cta { display: inline-flex !important; padding: .55em .9em; font-size: .85rem; }
+  .legal__toc ol { columns: 1; }
+}

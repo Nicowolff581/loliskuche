@@ -9,6 +9,8 @@ también responde en loliskuche.pages.dev). Las etiquetas canonical, Open Graph,
 
 ```
 index.html                  La página (inicio, historia, menú, pedido, preguntas, contacto)
+privacidad.html             Política de tratamiento de datos personales (Ley 1581 de 2012)
+terminos.html               Términos y condiciones (Estatuto del Consumidor, Ley 1480 de 2011)
 css/styles.css              Estilos: colores y fuentes en las variables de :root
 js/main.js                  Menú, barra inferior, pedido, mensaje de WhatsApp y movimientos
 img/marca/                  Logo, ícono del menú, ícono de la pestaña e imagen para compartir
@@ -37,3 +39,9 @@ google3946fe4c509c6b46.html Verificación de Google Search Console (no borrar)
   `nombre.webp` de 720 px y `nombre.jpg`) y reemplaza el recuadro `item__photo--empty`
   por la imagen, como en las demás salchichas.
 - **Número de WhatsApp:** `WHATSAPP_NUMBER` en `js/main.js` y los enlaces `wa.me` de `index.html`.
+
+## Datos personales
+
+El pedido exige marcar la casilla de autorización de datos antes de abrir WhatsApp, y el
+mensaje incluye la línea de autorización, que queda como prueba. Los datos del responsable en
+`privacidad.html` y `terminos.html` están marcados con `[COMPLETAR: …]`.

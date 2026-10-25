@@ -217,11 +217,14 @@ function buildMessage() {
   text += `\n\nNombre: ${data.get("name").trim()}`;
   text += `\nDirección: ${data.get("address").trim()}${barrio ? ", " + barrio : ""} (Bogotá)`;
   text += `\nPago: ${data.get("pay")}`;
+  text += "\n\n✓ Autorizo el tratamiento de mis datos y acepto los términos de loliskuche.com";
   return text;
 }
 
 const filled = (id) => document.getElementById(id).value.trim() !== "";
-const orderReady = () => messageEdited || (picked().length > 0 && filled("oName") && filled("oAddress"));
+const consentBox = document.getElementById("oConsent");
+// Sin la autorización de datos no se envía ningún pedido, tampoco el mensaje editado a mano
+const orderReady = () => consentBox.checked && (messageEdited || (picked().length > 0 && filled("oName") && filled("oAddress")));
 
 // El texto que se envía: el que la persona editó, o el generado
 const currentMessage = () => (messageEdited ? messageBox.value : buildMessage());
@@ -272,7 +275,13 @@ function render() {
 
   if (!messageEdited) messageBox.value = buildMessage();
   const link = waLink(currentMessage());
-  sendTemplate.href = link;
+  if (consentBox.checked) {
+    sendTemplate.href = link;
+    sendTemplate.target = "_blank";
+  } else {
+    sendTemplate.href = "#orderForm";
+    sendTemplate.removeAttribute("target");
+  }
   // Sin salchichas, nombre o dirección, el botón no lleva a WhatsApp: muestra qué falta.
   // (Algunas apps abren el enlace antes de que la página pueda detenerlo.)
   if (orderReady()) {
@@ -337,8 +346,22 @@ function hideError() {
   orderError.dataset.reason = "";
 }
 
+function needConsent(e) {
+  if (consentBox.checked) return false;
+  e.preventDefault();
+  consentBox.closest(".consent").classList.add("is-invalid");
+  showError("Marca la casilla de autorización de datos para poder enviar tu pedido.", "consent");
+  consentBox.focus();
+  return true;
+}
+consentBox.addEventListener("change", () => {
+  consentBox.closest(".consent").classList.remove("is-invalid");
+  if (orderError.dataset.reason === "consent") hideError();
+});
+sendTemplate.addEventListener("click", needConsent);
+
 sendBtn.addEventListener("click", (e) => {
-  if (messageEdited) return; // la persona escribió su propio mensaje
+  if (messageEdited) { needConsent(e); return; } // la persona escribió su propio mensaje
   if (picked().length === 0) {
     e.preventDefault();
     showError("Primero elige al menos una salchicha en el menú (paso 1).", "empty");
@@ -352,7 +375,9 @@ sendBtn.addEventListener("click", (e) => {
     showError(missing.length === 2 ? "Escribe tu nombre y tu dirección de entrega." :
       missing[0].id === "oName" ? "Escribe tu nombre." : "Escribe tu dirección de entrega en Bogotá.", "fields");
     missing[0].focus();
+    return;
   }
+  needConsent(e);
 });
 // Enter en un campo de texto hace lo mismo que tocar el botón verde
 form.addEventListener("submit", (e) => e.preventDefault());
