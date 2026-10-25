@@ -42,5 +42,4 @@ google3946fe4c509c6b46.html Verificación de Google Search Console (no borrar)
 ## Datos personales
 
 El pedido exige marcar la casilla de autorización de datos antes de abrir WhatsApp, y el
-mensaje incluye la línea de autorización, que queda como prueba. Los datos del responsable en
-`privacidad.html` están marcados con `[COMPLETAR: …]`.
+mensaje incluye la línea de autorización, que queda como prueba.
