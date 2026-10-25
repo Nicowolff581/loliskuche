@@ -51,6 +51,14 @@
       "addressCountry": "CO"
     },
     "areaServed": { "@type": "City", "name": "Bogotá" },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
     "sameAs": ["https://www.instagram.com/loliskuche/"],
     "hasMenu": {
       "@type": "Menu",
@@ -122,8 +130,8 @@
         <span class="brand__name">Loli's Küche</span>
       </a>
       <nav class="topbar__nav" id="navMenu" aria-label="Principal">
-        <a href="#nuestra-historia">Historia</a>
         <a href="#menu">Menú</a>
+        <a href="#nuestra-historia">Historia</a>
         <a href="#preguntas">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -159,46 +167,9 @@
           <li>8 variedades</li>
           <li>Precocidas y al vacío</li>
           <li>Nequi o Daviplata</li>
+          <li>Entregas de 8:00 a.m. a 5:00 p.m.</li>
           <li class="badge--city"><svg aria-hidden="true"><use href="#pin-icon"/></svg>Domicilios solo en Bogotá</li>
         </ul>
-      </div>
-    </section>
-
-    <div class="rauten" aria-hidden="true"></div>
-
-    <!-- ============ HISTORIA ============ -->
-    <section class="section" id="nuestra-historia">
-      <div class="wrap story">
-        <figure class="story__figure">
-          <div class="arch">
-            <img src="img/historia/abuelo.webp" srcset="img/historia/abuelo-400.webp 400w, img/historia/abuelo.webp 568w" sizes="(max-width: 760px) 86vw, 324px" alt="Retrato dibujado del abuelo Loli, fundador de Loli's Küche, sonriente y con su suéter de rombos azules" width="568" height="692" loading="lazy" decoding="async" data-fallback="arch">
-            <div class="arch__empty" hidden>
-              <svg class="edelweiss edelweiss--lg" aria-hidden="true"><use href="#edelweiss"/></svg>
-              <span>Foto del abuelo Loli</span>
-            </div>
-          </div>
-          <svg class="edelweiss story__flower" aria-hidden="true"><use href="#edelweiss"/></svg>
-          <figcaption>Loli, nuestro abuelo</figcaption>
-        </figure>
-
-        <div class="story__text">
-          <p class="eyebrow">Unsere Geschichte</p>
-          <h2 class="section__title">Nuestra historia</h2>
-          <blockquote class="story__quote">Loli era nuestro abuelo. Esta es su cocina.</blockquote>
-          <p>Nuestro abuelo Loli era alemán. Empezó vendiendo salchichas preparadas al estilo de su tierra, y así nació Loli's Küche, que en alemán quiere decir «la cocina de Loli».</p>
-          <p>Hoy nosotros, su familia, seguimos con el negocio con el mismo amor que él le puso desde el primer día. Sus recetas siguen vivas en cada paquete que preparamos.</p>
-
-          <div class="renewed">
-            <p class="renewed__title">Mismo sabor. Nueva imagen.</p>
-            <p>Renovamos nuestra imagen para contar mejor quiénes somos y de dónde venimos. Lo que va adentro de cada salchicha sigue igual.</p>
-          </div>
-
-          <ul class="values">
-            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Tradición alemana</li>
-            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Calidad</li>
-            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Espíritu de familia</li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -353,7 +324,7 @@
 
         <p class="city-notice">
           <svg aria-hidden="true"><use href="#pin-icon"/></svg>
-          <span><strong>Solo hacemos domicilios en Bogotá.</strong> Por ahora no enviamos a otros municipios ni ciudades.</span>
+          <span><strong>Solo hacemos domicilios en Bogotá</strong>, todos los días de 8:00 a.m. a 5:00 p.m. Por ahora no enviamos a otros municipios ni ciudades.</span>
         </p>
 
         <div class="order">
@@ -389,7 +360,7 @@
             <p class="order__error" id="orderError" role="alert" hidden></p>
             <a class="btn btn--wa btn--block btn--lg" id="sendOrder" aria-label="Enviar mi pedido por WhatsApp" href="https://wa.me/573176645184" target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#wa-icon"/></svg>
-              WhatsApp
+              Pedir por WhatsApp
             </a>
           </form>
         </div>
@@ -411,6 +382,44 @@
 
     <div class="rauten" aria-hidden="true"></div>
 
+    <!-- ============ HISTORIA ============ -->
+    <section class="section" id="nuestra-historia">
+      <div class="wrap story">
+        <figure class="story__figure">
+          <div class="arch">
+            <img src="img/historia/abuelo.webp" srcset="img/historia/abuelo-400.webp 400w, img/historia/abuelo.webp 568w" sizes="(max-width: 760px) 86vw, 324px" alt="Retrato dibujado del abuelo Loli, fundador de Loli's Küche, sonriente y con su suéter de rombos azules" width="568" height="692" loading="lazy" decoding="async" data-fallback="arch">
+            <div class="arch__empty" hidden>
+              <svg class="edelweiss edelweiss--lg" aria-hidden="true"><use href="#edelweiss"/></svg>
+              <span>Foto del abuelo Loli</span>
+            </div>
+          </div>
+          <svg class="edelweiss story__flower" aria-hidden="true"><use href="#edelweiss"/></svg>
+          <figcaption>Loli, nuestro abuelo</figcaption>
+        </figure>
+
+        <div class="story__text">
+          <p class="eyebrow">Unsere Geschichte</p>
+          <h2 class="section__title">Nuestra historia</h2>
+          <blockquote class="story__quote">Loli era nuestro abuelo. Esta es su cocina.</blockquote>
+          <p>Nuestro abuelo Loli era alemán. Empezó vendiendo salchichas preparadas al estilo de su tierra, y así nació Loli's Küche, que en alemán quiere decir «la cocina de Loli».</p>
+          <p>Hoy nosotros, su familia, seguimos con el negocio con el mismo amor que él le puso desde el primer día. Sus recetas siguen vivas en cada paquete que preparamos.</p>
+
+          <div class="renewed">
+            <p class="renewed__title">Mismo sabor. Nueva imagen.</p>
+            <p>Renovamos nuestra imagen para contar mejor quiénes somos y de dónde venimos. Lo que va adentro de cada salchicha sigue igual.</p>
+          </div>
+
+          <ul class="values">
+            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Tradición alemana</li>
+            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Calidad</li>
+            <li><svg class="edelweiss" aria-hidden="true"><use href="#edelweiss"/></svg>Espíritu de familia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="rauten" aria-hidden="true"></div>
+
     <!-- ============ PREGUNTAS FRECUENTES ============ -->
     <section class="section" id="preguntas">
       <div class="wrap faq">
@@ -421,6 +430,10 @@
         <details>
           <summary>¿Hacen domicilios fuera de Bogotá?</summary>
           <p>No. Por ahora solo hacemos domicilios dentro de Bogotá.</p>
+        </details>
+        <details>
+          <summary>¿A qué hora atienden y entregan?</summary>
+          <p>Atendemos pedidos y hacemos entregas a domicilio todos los días de 8:00 a.m. a 5:00 p.m.</p>
         </details>
         <details>
           <summary>¿Cuánto cuesta el domicilio?</summary>
@@ -467,6 +480,11 @@
             <span>Al mismo número de WhatsApp</span>
           </div>
           <div class="contact__card">
+            <span class="contact__label">Horario</span>
+            <strong>8 a.m. a 5 p.m.</strong>
+            <span>Atención y entregas a domicilio, todos los días</span>
+          </div>
+          <div class="contact__card">
             <span class="contact__label">Domicilios</span>
             <strong>Solo en Bogotá</strong>
             <span>El valor del domicilio se cobra aparte</span>
@@ -486,6 +504,7 @@
       <p>La cocina de Loli · Tradición alemana<br>Calidad · Espíritu de familia</p>
       <address class="footer__nap">
         Salchichas alemanas a domicilio en Bogotá, Colombia<br>
+        Atención y entregas: todos los días, 8:00 a.m. – 5:00 p.m.<br>
         WhatsApp <a href="https://wa.me/573176645184" target="_blank" rel="noopener">317 664 5184</a> ·
         Instagram <a href="https://www.instagram.com/loliskuche/" target="_blank" rel="noopener">@loliskuche</a>
       </address>

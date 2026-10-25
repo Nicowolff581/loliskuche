@@ -16,12 +16,12 @@ document.querySelectorAll("img[data-fallback]").forEach((img) => {
   else img.addEventListener("error", () => onMissing(img));
 });
 
-// ---------- Dónde estás: resaltar la sección actual ----------
+// ---------- Dónde estás: resaltar la sección actual (en el orden de la página) ----------
 const SECTION_NAMES = {
   inicio: "Inicio",
-  "nuestra-historia": "Historia",
   menu: "Menú",
   pedidos: "Tu pedido",
+  "nuestra-historia": "Historia",
   preguntas: "Preguntas",
   contacto: "Contacto",
 };
