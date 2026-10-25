@@ -619,3 +619,4 @@ mark.fill { background: #fff3c4; color: #7a4b00; padding: 0 .25em; border-radius
   .legal-page .topbar .btn--cta { display: inline-flex !important; padding: .55em .9em; font-size: .85rem; }
   .legal__toc ol { columns: 1; }
 }
+.legal h3 { font-size: 1.05rem; margin: 1.2rem 0 .4rem; color: var(--blue); }
