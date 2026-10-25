@@ -1,0 +1,8 @@
+# Cloudflare Pages: las fotos cambian poco, el navegador las guarda una semana
+/img/*
+  Cache-Control: public, max-age=604800
+
+# Seguridad básica para toda la página
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
