@@ -392,19 +392,3 @@ copyBtn.addEventListener("click", () => {
 render();
 
 document.getElementById("year").textContent = new Date().getFullYear();
-
-// ---------- Aviso "Powered by Netlify" ----------
-// En el plan gratis de Netlify aparece un aviso fijo abajo a la derecha. Cuando
-// está, se deja espacio para que no tape la barra inferior ni los botones.
-const markHostBadge = () => {
-  if (document.getElementById("nl-badge-frame")) {
-    document.body.classList.add("has-host-badge");
-    return true;
-  }
-  return false;
-};
-if (!markHostBadge()) {
-  const badgeWatch = new MutationObserver(() => { if (markHostBadge()) badgeWatch.disconnect(); });
-  badgeWatch.observe(document.body, { childList: true });
-  setTimeout(() => badgeWatch.disconnect(), 15000);
-}

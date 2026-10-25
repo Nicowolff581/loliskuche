@@ -545,18 +545,6 @@ a.contact__card:hover { border-top-color: var(--sky); box-shadow: var(--shadow);
 .tabbar a { transition: background-color .2s ease, color .2s ease, transform .12s ease; -webkit-tap-highlight-color: transparent; }
 .tabbar a:active { transform: scale(.94); }
 
-/* Espacio para el aviso de Netlify (plan gratis), que va fijo abajo a la derecha */
-body.has-host-badge .wa-float { bottom: 76px; }
-body.has-host-badge .wa-float.is-raised { bottom: 142px; }
-body.has-host-badge .cart-bar { bottom: 60px; border-radius: 12px; left: 16px; right: 16px; }
-body.has-host-badge .toast { bottom: 84px; }
-body.has-host-badge .scroll-hint { bottom: 76px; }
-@media (max-width: 760px) {
-  body.has-host-badge { padding-bottom: calc(124px + env(safe-area-inset-bottom, 0px)); }
-  body.has-host-badge .tabbar { padding-bottom: calc(58px + env(safe-area-inset-bottom, 0px)); }
-  body.has-host-badge .toast { bottom: calc(136px + env(safe-area-inset-bottom, 0px)); }
-  body.has-host-badge .scroll-hint { bottom: calc(142px + env(safe-area-inset-bottom, 0px)); }
-}
 
 /* Fotos de las salchichas en el menú */
 .item { overflow: hidden; align-content: start; }
