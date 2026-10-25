@@ -1,7 +1,9 @@
 # Loli's Küche
 
 Página de pedidos de **Loli's Küche**, salchichas alemanas con receta de familia, con domicilios
-solo en Bogotá. Publicada en **https://loliskuche.pages.dev** (Cloudflare Pages).
+solo en Bogotá. Publicada en **https://loliskuche.com** (Cloudflare Pages, proyecto `loliskuche`;
+también responde en loliskuche.pages.dev). Las etiquetas canonical, Open Graph, el JSON-LD,
+`sitemap.xml` y `robots.txt` usan `https://loliskuche.com/`.
 
 ## Carpetas
 
