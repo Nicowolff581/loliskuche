@@ -217,7 +217,7 @@ function buildMessage() {
   text += `\n\nNombre: ${data.get("name").trim()}`;
   text += `\nDirección: ${data.get("address").trim()}${barrio ? ", " + barrio : ""} (Bogotá)`;
   text += `\nPago: ${data.get("pay")}`;
-  text += "\n\n✓ Autorizo el tratamiento de mis datos y acepto los términos de loliskuche.com";
+  text += "\n\n✓ Autorizo el tratamiento de mis datos según la política de loliskuche.com/privacidad";
   return text;
 }
 
